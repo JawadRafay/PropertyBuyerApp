@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Home Match AI</string>
+    <string name="you_need_some_mandatory">You need to give storage permissions to continue. Do you want to give permission?</string>
+
+</resources>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.activities.ChotbotAcitivity">
+
+
+    <data></data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/topbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_55sdp"
+            android:background="@color/light_gray">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_back"
+                android:layout_marginStart="@dimen/_10sdp"/>
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:src="@drawable/ai"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_10sdp"/>
+
+            <TextView
+                android:id="@+id/typing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thinking..."
+                android:visibility="gone"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/icon"/>
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/topbar"
+            android:layout_above="@+id/writechatlayout"/>
+
+        <RelativeLayout
+            android:id="@+id/writechatlayout"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_toStartOf="@+id/send_layout"
+            android:background="@drawable/et_bg">
+
+            <EditText
+                android:id="@+id/msgedittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/_28sdp"
+                android:background="@android:color/transparent"
+                android:gravity="start"
+                android:hint="Ask me anything..."
+                android:inputType="textMultiLine"
+                android:maxHeight="@dimen/_65sdp"
+                android:padding="@dimen/_5sdp"
+                android:textSize="@dimen/_11sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_3sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_marginBottom="@dimen/_6sdp"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/send_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:layout_marginBottom="@dimen/_6sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:id="@+id/sendbtn"
+                android:layout_width="@dimen/_34sdp"
+                android:layout_height="@dimen/_34sdp"
+                android:background="@drawable/circle_bg"
+                android:src="@drawable/send"
+                android:padding="@dimen/_9sdp"/>
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+</layout>
